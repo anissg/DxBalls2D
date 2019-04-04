@@ -1,2 +1,2 @@
 # DxBalls2D
-a small DirectX12 2D physics collision simulation
+a small DirectX11 2D physics collision simulation
