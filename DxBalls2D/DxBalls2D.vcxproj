@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -23,32 +23,32 @@
     <ProjectGuid>{C7DAF35E-A074-43ED-9889-92B40E8DE133}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>DxBalls2D</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -72,15 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Submodules\External\DirectXTK.lib\Inc;$(SolutionDir)Submodules\External\imgui.lib\Inc;$(SolutionDir)Submodules\TinyDxEngine.app\Inc;$(SolutionDir)Submodules\TinyDxEngine.base\Inc;$(SolutionDir)Submodules\TinyDxEngine.gfx\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Build\$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Submodules\External\DirectXTK.lib\Inc;$(SolutionDir)Submodules\External\imgui.lib\Inc;$(SolutionDir)Submodules\TinyDxEngine.app\Inc;$(SolutionDir)Submodules\TinyDxEngine.base\Inc;$(SolutionDir)Submodules\TinyDxEngine.gfx\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Build\$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)Submodules\External\DirectXTK.lib\Inc;$(SolutionDir)Submodules\External\imgui.lib\Inc;$(SolutionDir)Submodules\TinyDxEngine.app\Inc;$(SolutionDir)Submodules\TinyDxEngine.base\Inc;$(SolutionDir)Submodules\TinyDxEngine.gfx\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Build\$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)Submodules\External\DirectXTK.lib\Inc;$(SolutionDir)Submodules\External\imgui.lib\Inc;$(SolutionDir)Submodules\TinyDxEngine.app\Inc;$(SolutionDir)Submodules\TinyDxEngine.base\Inc;$(SolutionDir)Submodules\TinyDxEngine.gfx\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Build\$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -94,6 +102,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Winmm.lib;d3d11.lib;DirectXTK.lib;DXGI.lib;imgui.lib;TinyDxEngine.base.lib;TinyDxEngine.gfx.lib;TinyDxEngine.app.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -108,6 +117,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Winmm.lib;d3d11.lib;DirectXTK.lib;DXGI.lib;imgui.lib;TinyDxEngine.base.lib;TinyDxEngine.gfx.lib;TinyDxEngine.app.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -126,6 +136,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Winmm.lib;d3d11.lib;DirectXTK.lib;DXGI.lib;imgui.lib;TinyDxEngine.base.lib;TinyDxEngine.gfx.lib;TinyDxEngine.app.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -144,16 +155,18 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Winmm.lib;d3d11.lib;DirectXTK.lib;DXGI.lib;imgui.lib;TinyDxEngine.base.lib;TinyDxEngine.gfx.lib;TinyDxEngine.app.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="DxBalls2D.h" />
-    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="PhysicsSim.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DxBalls2D.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PhysicsSim.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -162,13 +175,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="DxBalls2D.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="DxBalls2D.ico" />
-    <Image Include="small.ico" />
+    <Image Include="ball01.png" />
+    <Image Include="ball02.png" />
+    <Image Include="ball03.png" />
+    <Image Include="ball04.png" />
+    <Image Include="ball05.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>

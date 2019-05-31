@@ -5,17 +5,14 @@
 
 #pragma once
 
-#include "targetver.h"
-
-#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
-// Windows Header Files
-#include <windows.h>
-
-// C RunTime Header Files
-#include <stdlib.h>
-#include <malloc.h>
-#include <memory.h>
-#include <tchar.h>
-
+#include <logger.h>
+#include <Engine.h>
+#include <DirectxMath.h>
+#include <DirectXColors.h>
+#include <Sprite.h>
+#include <vector>
 
 // reference additional headers your program requires here
+
+#include "Ball.h"
+#include "PhysicsSim.h"

@@ -18,13 +18,10 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
+    <ClInclude Include="Ball.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DxBalls2D.h">
+    <ClInclude Include="PhysicsSim.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,20 +29,30 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DxBalls2D.cpp">
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsSim.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="DxBalls2D.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="small.ico">
+    <Image Include="ball01.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="DxBalls2D.ico">
+    <Image Include="ball02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ball03.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ball04.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ball05.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
